@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card" id="card1">
+            <h1>🎉 Happy Birthday, Santa Sir! 🎂</h1>
+            <button onclick="openNextCard('card1', 'card2')">Open Card</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card hidden" id="card2">
+            <h1>🎁 Surprise Awaits!</h1>
+            <button onclick="openNextCard('card2', 'card3')">Open Next</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card hidden" id="card3">
+            <h1>✨ Almost There! ✨</h1>
+            <button onclick="openNextCard('card3', 'finalCard')">Final Reveal</button>
+        </div>
+
+        <!-- Final Reveal -->
+        <div class="card hidden" id="finalCard">
+            <h1>Enter Password to Unlock Your Gift 🎉</h1>
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Unlock</button>
+            <p id="error" class="hidden">Wrong password! Try again.</p>
+        </div>
+
+        <!-- Gift Reveal -->
+        <div class="card hidden" id="gift">
+            <h1>🎊 Partyyyyy! 🎊</h1>
+            <p>Your gift: Prayer! A lifetime of happiness and health. May all your dreams become blessings of Allah. Ameeen!! - By Naila</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
